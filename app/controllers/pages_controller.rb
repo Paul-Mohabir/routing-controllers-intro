@@ -21,6 +21,11 @@ before_action :set_kitten_url, only: [:kitten, :kittens]
   def kittens
   end
 
+  def secrets
+    puts "You know shinigamis eat apples"
+    flash[:alert] = "Sorry, you're not authorized to see that page!"
+  end
+
   def set_kitten_url
     requested_size = params[:size]
     @kitten_url = "http://lorempixel.com/#{requested_size}/cats"
