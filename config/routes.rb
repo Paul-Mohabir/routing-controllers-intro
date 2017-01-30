@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   get '/welcome/contest' => 'pages#contest'
   get '/contest' => 'pages#contest'
+
+  get '/kitten/:size/:size' => 'pages#kitten'
 end
